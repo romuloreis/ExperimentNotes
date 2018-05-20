@@ -1,0 +1,21 @@
+It was created an application for running a TCP socket server.
+*the application is in this folder
+The application was sent to the VM in Virtual box by adb tool
+*read more in "notasVM"
+
+The client, for this server, was developed in pure java code and can be accessed by runnig
+sudo ~/eclipse/eclipse
+WorkSpace - /root/workspace/socket
+
+
+10.140.250.190 - real device
+
+
+
+
+
+real devices access local vm
+modify sdk from real devices
+VM building valid iso
+network monitoring
+VM installing - ok

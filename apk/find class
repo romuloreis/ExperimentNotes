@@ -1,0 +1,46 @@
+root@POAMOTANALY013:/home/it# find / -name Html.java
+*Usado no emulador do android studio
+/root/Android/Sdk/sources/android-22/android/text/Html.java
+/root/Android/Sdk/sources/android-23/android/text/Html.java
+/root/Android/Sdk
+
+*SDK do android para VM
+/home/it/androidx864/frameworks/base/core/java/android/text/Html.java
+
+*SDK compilado
+/home/it/WORKING_DIRECTORY/out/target/common/obj/JAVA_LIBRARIES/android_system_stubs_current_intermediates/src/android/text/Html.java
+/home/it/WORKING_DIRECTORY/out/target/common/obj/JAVA_LIBRARIES/android_stubs_current_intermediates/src/android/text/Html.java
+
+*Source do SDK
+/home/it/WORKING_DIRECTORY/frameworks/base/core/java/android/text/Html.java
+
+
+
+
+http://stackoverflow.com/questions/16168799/android-emulator-and-virtualbox-cannot-run-at-same-time
+
+
+
+
+pega o classes.jar
+/home/it/WORKING_DIRECTORY/outShamu/target/product/shamu/system/framework.jar
+classes.odex
+
+
+
+android.jar and framework.jar are the same thing
+
+
+
+outShamu/target/common/obj/JAVA_LIBRARIES/android_uiautomator_intermediates/emma_out/lib/classes-jarjar.jar
+outShamu/target/common/obj/JAVA_LIBRARIES/android_uiautomator_intermediates/classes.jar
+
+/home/it/WORKING_DIRECTORY/outShamu/target/product/shamu/obj/JAVA_LIBRARIES/framework_intermediates/javalib.jar
+classes.dex
+classes2.dex
+
+
+ 	
+
+In Lollipop and the switch to ART and production builds with WITH_DEXPREOPT=true, the bootclasspath files are inside Boot.oat (/system/framework/arm/boot.oat), you won't wind anything inside the frameworks jars.
+You have to build with WITH_DEXPREOPT=false to have the classic framework.jar with classes.dex inside.

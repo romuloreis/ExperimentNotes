@@ -1,0 +1,30 @@
+10.0.2.15
+192.168.56.101
+
+cd '/home/it/WORKING_DIRECTORY/out/host/linux-x86/bin'
+./adb kill-server
+./adb connect 10.0.2.15:5555
+
+VBoxManage modifyvm AndroidInstalled --natpf1 adb,tcp,*,5555,*,5555
+./adb connect localhost:5555
+./adb devices
+./adb -s emulator-5554 install /home/it/Downloads/Art_Of_Game_Design_Lenses_v3.00_apkpure.apk
+
+
+
+http://developer.android.com/intl/pt-br/tools/help/adb.html
+http://www.android-x86.org/documents/debug-howto
+http://www.android-x86.org/documents/virtualboxhowto
+
+
+#Só funciona local (oq só funciona local?)
+host-only-adapter
+
+
+
+#Cria a regra para ouvir a porta 6000 do computador físico e transferir os pacotes para a porta 6000 da VM
+VBoxManage modifyvm MyAndroid --natpf1 mytcp,tcp,*,6000,*,6000
+*NAT
+
+
+VM-STUDIO-EMU
